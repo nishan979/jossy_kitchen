@@ -7,7 +7,7 @@ import 'package:jossy_kitchen/features/landing/views/landing_page.dart';
 abstract class AppPages {
   static final pages = [
     GetPage(name: Routes.landing, page: () => const LandingPage()),
-    GetPage(name: Routes.onboarding, page: () => OnboardingScreen()),
+    GetPage(name: Routes.onboarding, page: () => OnboardingPage()),
     GetPage(name: Routes.signIn, page: () => const SignInScreen()),
     GetPage(name: Routes.signUp, page: () => const SignUpScreen())
   ];
