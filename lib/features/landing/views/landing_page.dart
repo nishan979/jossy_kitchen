@@ -16,7 +16,7 @@ class _LandingPageState extends State<LandingPage> {
   @override
   void initState() {
     super.initState();
-    Timer(const Duration(seconds: 3), () {
+    Timer(const Duration(seconds: 1), () {
       Get.toNamed(Routes.onboarding);
       // for GetX
     });
@@ -27,7 +27,6 @@ class _LandingPageState extends State<LandingPage> {
     return Scaffold(
       backgroundColor: AppColors.primary,
       body: Center(
-
         child: Image.asset(
           'assets/landing_page/jossy_kitchen.png',
           height: 129,

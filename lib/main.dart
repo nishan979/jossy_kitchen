@@ -13,9 +13,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: 'Jossy Kitchen',
-      theme: ThemeData(
-        primarySwatch: Colors.red,
-      ),
+      // theme: ThemeData(
+      //   primarySwatch: Colors.red,
+      // ),
       initialRoute: Routes.landing,
       getPages: AppPages.pages,
       debugShowCheckedModeBanner: false,
