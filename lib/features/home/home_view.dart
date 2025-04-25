@@ -164,22 +164,14 @@ class HomeView extends StatelessWidget {
                             },
                           )),
                     ),
-                    // Expanded(
-                    //   child: Obx(() => ListView.builder(
-                    //         itemCount: controller.filteredDishes.length,
-                    //         itemBuilder: (context, index) {
-                    //           return FoodCard(dish: controller.filteredDishes[index]);
-                    //         },
-                    //       )),
-                    // ),
                   ],
                 ),
               ),
             ),
             Positioned(
-              left: 30,
-              right: 30,
-              bottom: 16,
+              left: 20,
+              right: 20,
+              bottom: 0,
               child: Container(
                 constraints: BoxConstraints(
                   maxHeight: 60,
@@ -198,75 +190,34 @@ class HomeView extends StatelessWidget {
                 ),
                 child: Center(
                   
-                  child: Obx(
-                    () => BottomNavigationBar(
-                      iconSize: 25,
-                      elevation: 0,
-                      backgroundColor: Colors.transparent,
-                      type: BottomNavigationBarType.fixed,
-                      selectedItemColor: AppColors.primary,
-                      unselectedItemColor: Colors.black,
-                      currentIndex: controller.currentIndex.value,
-                      onTap: (index) => controller.changeTab(index),
-                      items: const [
-                        BottomNavigationBarItem(
-                            icon: Icon(Icons.home), label: ''),
-                        BottomNavigationBarItem(
-                            icon: Icon(Icons.favorite), label: ''),
-                        BottomNavigationBarItem(
-                            icon: Icon(Icons.shopping_cart), label: ''),
-                        BottomNavigationBarItem(
-                            icon: Icon(Icons.list), label: ''),
-                      ],
-                    ),
-                  ),
+                  // child: Obx(
+                  //   () => BottomNavigationBar(
+                  //     iconSize: 25,
+                  //     elevation: 0,
+                  //     backgroundColor: Colors.transparent,
+                  //     type: BottomNavigationBarType.fixed,
+                  //     selectedItemColor: AppColors.primary,
+                  //     unselectedItemColor: Colors.black,
+                  //     currentIndex: controller.currentIndex.value,
+                  //     onTap: (index) => controller.changeTab(index),
+                  //     items: const [
+                  //       BottomNavigationBarItem(
+                  //           icon: Icon(Icons.home), label: ''),
+                  //       BottomNavigationBarItem(
+                  //           icon: Icon(Icons.favorite), label: ''),
+                  //       BottomNavigationBarItem(
+                  //           icon: Icon(Icons.shopping_cart), label: ''),
+                  //       BottomNavigationBarItem(
+                  //           icon: Icon(Icons.list), label: ''),
+                  //     ],
+                  //   ),
+                  // ),
                 ),
               ),
             ),
           ],
         ),
       ),
-
-      // Bottom Navigation with 4 tabs with transparent color which is in a white rounded box
-
-      // bottomNavigationBar: Padding(
-      //   padding: const EdgeInsets.only(left: 30, right: 30, bottom: 16),
-      //   child: Container(
-      //     //alignment: Alignment.center,
-
-      //     height: 55,
-      //     decoration: BoxDecoration(
-      //       color: AppColors.white,
-      //       borderRadius: const BorderRadius.all(Radius.circular(30)),
-      //       boxShadow: [
-      //         BoxShadow(
-      //           color: Colors.black.withOpacity(0.1),
-      //           blurRadius: 10,
-      //           offset: const Offset(0, -2),
-      //         ),
-      //       ],
-      //     ),
-      //     child: Obx(
-      //       () => BottomNavigationBar(
-      //         iconSize: 25,
-      //         elevation: 0,
-      //         backgroundColor: Colors.blue,
-      //         type: BottomNavigationBarType.fixed,
-      //         selectedItemColor: AppColors.primary,
-      //         unselectedItemColor: Colors.black,
-      //         currentIndex: controller.currentIndex.value,
-      //         onTap: (index) => controller.changeTab(index),
-      //         items: const [
-      //           BottomNavigationBarItem(icon: Icon(Icons.home), label: ''),
-      //           BottomNavigationBarItem(icon: Icon(Icons.favorite), label: ''),
-      //           BottomNavigationBarItem(
-      //               icon: Icon(Icons.shopping_cart), label: ''),
-      //           BottomNavigationBarItem(icon: Icon(Icons.list), label: ''),
-      //         ],
-      //       ),
-      //     ),
-      //   ),
-      // ),
     );
   }
 }

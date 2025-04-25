@@ -5,7 +5,7 @@ import 'package:jossy_kitchen/food/food_model.dart';
 class FoodCard extends StatelessWidget {
   final FoodModel dish;
 
-  const FoodCard({required this.dish});
+  const FoodCard({super.key, required this.dish});
 
   @override
   Widget build(BuildContext context) {
