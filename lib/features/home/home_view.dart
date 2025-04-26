@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:jossy_kitchen/core/constants/colors.dart';
+import 'package:jossy_kitchen/core/routes/app_pages.dart';
 import 'package:jossy_kitchen/features/home/home_controller.dart';
 import 'package:jossy_kitchen/food/food_card.dart';
+import 'package:jossy_kitchen/food/product_page.dart';
 
 class HomeView extends StatelessWidget {
   HomeView({super.key});
@@ -12,6 +14,7 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.primary,
+      
       body: SafeArea(
         child: Stack(
           children: [
@@ -159,8 +162,15 @@ class HomeView extends StatelessWidget {
                             ),
                             itemCount: controller.filteredDishes.length,
                             itemBuilder: (context, index) {
-                              return FoodCard(
-                                  dish: controller.filteredDishes[index]);
+                              return GestureDetector(
+                                onTap: () {
+                                  Get.to(ProductPage(
+                                    productNo: index,
+                                  ));
+                                },
+                                child: FoodCard(
+                                    dish: controller.filteredDishes[index]),
+                              );
                             },
                           )),
                     ),
@@ -189,29 +199,28 @@ class HomeView extends StatelessWidget {
                   ],
                 ),
                 child: Center(
-                  
-                  // child: Obx(
-                  //   () => BottomNavigationBar(
-                  //     iconSize: 25,
-                  //     elevation: 0,
-                  //     backgroundColor: Colors.transparent,
-                  //     type: BottomNavigationBarType.fixed,
-                  //     selectedItemColor: AppColors.primary,
-                  //     unselectedItemColor: Colors.black,
-                  //     currentIndex: controller.currentIndex.value,
-                  //     onTap: (index) => controller.changeTab(index),
-                  //     items: const [
-                  //       BottomNavigationBarItem(
-                  //           icon: Icon(Icons.home), label: ''),
-                  //       BottomNavigationBarItem(
-                  //           icon: Icon(Icons.favorite), label: ''),
-                  //       BottomNavigationBarItem(
-                  //           icon: Icon(Icons.shopping_cart), label: ''),
-                  //       BottomNavigationBarItem(
-                  //           icon: Icon(Icons.list), label: ''),
-                  //     ],
-                  //   ),
-                  // ),
+                  child: Obx(
+                    () => BottomNavigationBar(
+                      iconSize: 25,
+                      elevation: 0,
+                      backgroundColor: Colors.transparent,
+                      type: BottomNavigationBarType.fixed,
+                      selectedItemColor: AppColors.primary,
+                      unselectedItemColor: Colors.black,
+                      currentIndex: controller.currentIndex.value,
+                      onTap: (index) => controller.changeTab(index),
+                      items: const [
+                        BottomNavigationBarItem(
+                            icon: Icon(Icons.home), label: ''),
+                        BottomNavigationBarItem(
+                            icon: Icon(Icons.favorite), label: ''),
+                        BottomNavigationBarItem(
+                            icon: Icon(Icons.shopping_cart), label: ''),
+                        BottomNavigationBarItem(
+                            icon: Icon(Icons.list), label: ''),
+                      ],
+                    ),
+                  ),
                 ),
               ),
             ),

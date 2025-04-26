@@ -5,6 +5,7 @@ import 'package:jossy_kitchen/features/auth/views/signin_screen.dart';
 import 'package:jossy_kitchen/features/auth/views/signup_screen.dart';
 import 'package:jossy_kitchen/features/home/home_view.dart';
 import 'package:jossy_kitchen/features/landing/views/landing_page.dart';
+import 'package:jossy_kitchen/food/product_page.dart';
 
 abstract class AppPages {
   static final pages = [
@@ -13,8 +14,8 @@ abstract class AppPages {
     GetPage(name: Routes.signIn, page: () => const SignInScreen()),
     GetPage(name: Routes.signUp, page: () => const SignUpScreen()),
     GetPage(name: Routes.letKnowYou, page: () => const LetKnowYou()),
-    // Add other pages here
     GetPage(name: Routes.home, page: () => HomeView()),
+    GetPage(name: Routes.product, page: () => ProductPage(productNo: 0,)),
   ];
 }
 
@@ -25,4 +26,5 @@ abstract class Routes {
   static const String signUp = '/signUp';
   static const String letKnowYou = '/letKnowYou';
   static const String home = '/home';
+  static const String product = '/product';
 }
