@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:jossy_kitchen/features/auth/views/favourite/favourite_page.dart';
 import 'package:jossy_kitchen/features/auth/views/let_know_you.dart';
 import 'package:jossy_kitchen/features/auth/views/onboarding_screen.dart';
 import 'package:jossy_kitchen/features/auth/views/signin_screen.dart';
@@ -16,6 +17,7 @@ abstract class AppPages {
     GetPage(name: Routes.letKnowYou, page: () => const LetKnowYou()),
     GetPage(name: Routes.home, page: () => HomeView()),
     GetPage(name: Routes.product, page: () => ProductPage(productNo: 0,)),
+    GetPage(name: Routes.favourite, page: () => PreFavouritePage()),
   ];
 }
 
@@ -27,4 +29,5 @@ abstract class Routes {
   static const String letKnowYou = '/letKnowYou';
   static const String home = '/home';
   static const String product = '/product';
+  static const String favourite = '/prefavourite';
 }
