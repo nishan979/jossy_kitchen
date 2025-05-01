@@ -7,7 +7,7 @@ import 'package:jossy_kitchen/food/product_data.dart';
 class ProductPage extends StatefulWidget {
   //final ProductPage dish;
   final int productNo;
-  ProductPage({super.key, required this.productNo});
+  const ProductPage({super.key, required this.productNo});
 
   @override
   State<ProductPage> createState() => _ProductPageState();

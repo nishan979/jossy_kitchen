@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:jossy_kitchen/core/constants/colors.dart';
-import 'package:jossy_kitchen/features/auth/views/favourite/favourite_page.dart';
+import 'package:jossy_kitchen/features/bottom_nav_bar/cart_page.dart';
 import 'package:jossy_kitchen/features/bottom_nav_bar/favourite_page.dart';
 import 'package:jossy_kitchen/features/bottom_nav_bar/home_page.dart';
 
 class HomeView extends StatefulWidget {
-  HomeView({super.key});
+  const HomeView({super.key});
 
   @override
   State<HomeView> createState() => _HomeViewState();
@@ -17,7 +17,7 @@ class _HomeViewState extends State<HomeView> {
   final List<Widget> _pages = [
     HomePage(),
     FavouritePage(),
-    Placeholder(),
+    CartPage(),
     Placeholder()
   ];
 

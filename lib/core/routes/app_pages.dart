@@ -1,11 +1,12 @@
 import 'package:get/get.dart';
-import 'package:jossy_kitchen/features/auth/views/favourite/favourite_page.dart';
 import 'package:jossy_kitchen/features/auth/views/let_know_you.dart';
 import 'package:jossy_kitchen/features/auth/views/onboarding_screen.dart';
 import 'package:jossy_kitchen/features/auth/views/signin_screen.dart';
 import 'package:jossy_kitchen/features/auth/views/signup_screen.dart';
+import 'package:jossy_kitchen/features/bottom_nav_bar/favourite_page.dart';
 import 'package:jossy_kitchen/features/home/home_view.dart';
 import 'package:jossy_kitchen/features/landing/views/landing_page.dart';
+import 'package:jossy_kitchen/food/bottom_payment_sheet.dart';
 import 'package:jossy_kitchen/food/product_page.dart';
 
 abstract class AppPages {
@@ -16,8 +17,9 @@ abstract class AppPages {
     GetPage(name: Routes.signUp, page: () => const SignUpScreen()),
     GetPage(name: Routes.letKnowYou, page: () => const LetKnowYou()),
     GetPage(name: Routes.home, page: () => HomeView()),
-    GetPage(name: Routes.product, page: () => ProductPage(productNo: 0,)),
-    GetPage(name: Routes.favourite, page: () => PreFavouritePage()),
+    GetPage(name: Routes.product, page: () => ProductPage(productNo: 0)),
+    GetPage(name: Routes.favourite, page: () => FavouritePage()),
+    GetPage(name: Routes.paymentSheet, page: () => const BottomPaymentSheet()),
   ];
 }
 
@@ -30,4 +32,5 @@ abstract class Routes {
   static const String home = '/home';
   static const String product = '/product';
   static const String favourite = '/prefavourite';
+  static const String paymentSheet = '/paymentSheet';
 }
