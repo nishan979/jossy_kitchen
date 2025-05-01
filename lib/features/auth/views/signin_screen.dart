@@ -157,7 +157,6 @@ class _SignInScreenState extends State<SignInScreen> {
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontFamily: 'Lato',
-                                  fontSize: 18,
                                   fontWeight: FontWeight.w400,
                                 ),
                               ),
@@ -170,7 +169,6 @@ class _SignInScreenState extends State<SignInScreen> {
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontFamily: 'Lato',
-                                  fontSize: 18,
                                   fontWeight: FontWeight.w400,
                                 ),
                               ),

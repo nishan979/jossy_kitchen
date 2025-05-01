@@ -51,13 +51,28 @@ class BottomPaymentSheet extends StatelessWidget {
                   context: context,
                   builder: (BuildContext context) {
                     return AlertDialog(
-                      title: const Text("Confirmation"),
+                      title: const Text(
+                        "Confirmation",
+                        style: TextStyle(
+                          fontFamily: 'Lato',
+                          fontSize: 25,
+                          fontWeight: FontWeight.w500,
+                          color: AppColors.primary,
+                        ),
+                      ),
                       content: const Text(
-                          "Are you sure you want to proceed with the payment?"),
+                        "Are you sure you want to proceed with the payment?",
+                        style: TextStyle(
+                          fontFamily: 'Lato',
+                          fontSize: 18,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.blue,
+                        ),
+                      ),
                       actions: [
                         TextButton(
                           onPressed: () {
-                            Navigator.of(context).pop(); // Close the dialog
+                            Get.back();
                           },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: AppColors.primary,
@@ -71,15 +86,30 @@ class BottomPaymentSheet extends StatelessWidget {
                         ),
                         ElevatedButton(
                           onPressed: () {
-                            Navigator.of(context).pop();
+                            Get.back();
                             // show alert dialog for payment success
                             showDialog(
                               context: context,
                               builder: (BuildContext context) {
                                 return AlertDialog(
-                                  title: const Text("Payment Successful"),
+                                  title: const Text(
+                                    "Payment Successful",
+                                    style: TextStyle(
+                                      fontFamily: 'Lato',
+                                      fontSize: 25,
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.green,
+                                    ),
+                                  ),
                                   content: const Text(
-                                      "Your payment has been processed successfully."),
+                                    "Your payment has been processed successfully.",
+                                    style: TextStyle(
+                                      fontFamily: 'Lato',
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.blue,
+                                    ),
+                                  ),
                                   actions: [
                                     TextButton(
                                       onPressed: () {

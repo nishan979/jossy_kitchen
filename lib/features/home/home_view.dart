@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:jossy_kitchen/core/constants/colors.dart';
+import 'package:jossy_kitchen/core/routes/app_pages.dart';
 import 'package:jossy_kitchen/features/bottom_nav_bar/cart_page.dart';
 import 'package:jossy_kitchen/features/bottom_nav_bar/favourite_page.dart';
 import 'package:jossy_kitchen/features/bottom_nav_bar/home_page.dart';
+import 'package:jossy_kitchen/features/bottom_nav_bar/order_history.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -18,7 +21,7 @@ class _HomeViewState extends State<HomeView> {
     HomePage(),
     FavouritePage(),
     CartPage(),
-    Placeholder()
+    OrderHistory(),
   ];
 
   void _onItemTapped(int index) {
@@ -51,7 +54,7 @@ class _HomeViewState extends State<HomeView> {
             padding: const EdgeInsets.only(right: 16, top: 8),
             child: GestureDetector(
               onTap: () {
-                //Get.toNamed(Routes.favourite);
+                Get.toNamed(Routes.profile);
               },
               child: CircleAvatar(
                 radius: 24,

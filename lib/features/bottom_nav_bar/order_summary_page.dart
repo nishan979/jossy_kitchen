@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 import 'package:jossy_kitchen/core/constants/colors.dart';
-import 'package:jossy_kitchen/core/routes/app_pages.dart';
 import 'package:jossy_kitchen/food/bottom_payment_sheet.dart';
 
 class OrderSummaryPage extends StatelessWidget {
